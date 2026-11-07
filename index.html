@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Kitty Island Adventure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #cebde0;
+            color: #978c88;
+        }
+        
+
+        /* ===== NAVBAR ===== */
+        header {
+            background-color: #b7a3e3;
+            padding: 14px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            height: 520px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url("island.png") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Baloo 2', cursive;
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            padding: 80px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .text-box {
+            width: 50%;
+            animation: fadeLeft 1.2s ease;
+        }
+
+        .text-box h2 {
+            font-family: 'Baloo 2', cursive;
+            font-size: 38px;
+            margin-bottom: 20px;
+            color: #8a4fa3;
+        }
+
+        .text-box p {
+            line-height: 1.8;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            padding: 14px 32px;
+            background-color: #b87ac9;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #9f5eb3;
+            transform: scale(1.05);
+        }
+
+        .image-box {
+            width: 45%;
+            animation: fadeRight 1.2s ease;
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #a287b3;
+            padding: 22px;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        /* ===== ANIMATION ===== */
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .main-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-box, .image-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header>
+    <img src="ft.png" alt="Logo">
+    <nav>
+        <a href="index.html"><font color="white">HOME</font></a> |
+        <a href="characters.html"><font color="white">CHARACTERS</font></a> |
+        <a href="updates.html"><font color="white">UPDATES</font></a> |
+        <a href="contact.html"><font color="white">CONTACT</font></a> |
+
+    </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div>
+        <h1>HELLO KITTY ISLAND ADVENTURE</h1>
+        <p>
+            Welcome to Hello Kitty Island Adventure! Explore the beautiful Seaside Resort,
+            enjoy fun activities like baking, fishing, and solving puzzles, and customize
+            your avatar for a unique experience.
+        </p>
+    </div>
+</section>
+
+<!-- ===== CONTENT (TEXT LEFT - IMAGE RIGHT) ===== -->
+<section class="main-content">
+    <div class="text-box">
+        <h2>Try the Adventure for Free!</h2>
+        <p>
+            Hello Kitty Island Intro is now available on the App Store. Explore the mysterious
+            Seaside Resort and discover fun activities like baking, fishing, solving puzzles,
+            and customizing your avatar.
+        </p>
+        <p>
+            An Apple Arcade subscription is required for the full Hello Kitty Island Adventure
+            game. Your progress will be saved so you can continue anytime.
+        </p>
+    </div>
+
+    <div class="image-box">
+        <img src="Adventure.png" alt="Hello Kitty Friends">
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <b style="color:#FFEAD8;">
+    &copy; CopyRight [Ashika Nur Shafana, 251011701024] - 2026
+</b>
+
+</footer>
+
+</body>
+</html>
